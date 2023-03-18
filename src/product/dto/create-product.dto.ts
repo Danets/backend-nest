@@ -1,6 +1,5 @@
 import {
     IsNotEmpty,
-    IsOptional,
     IsString,
   } from 'class-validator';
   
@@ -10,8 +9,8 @@ import {
     title: string;
   
     @IsString()
-    @IsOptional()
-    dsc?: string;
+    @IsNotEmpty()
+    dsc: string;
   
     @IsString()
     @IsNotEmpty()
